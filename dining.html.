@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dining | Morehead City Local Guide</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Dining in Morehead City</h1>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="activities.html">Indoor & Outdoor Activities</a>
+            <a href="dining.html">Dining</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Places to Eat</h2>
+
+        <p>
+            Morehead City has different dining options
+            for visitors who enjoy trying new foods.
+            From fresh seafood to waterfront restaurants,
+            there are plenty of places to explore.
+        </p>
+
+        <h3>Dining Experiences</h3>
+
+        <ul>
+            <li>Local seafood restaurants</li>
+            <li>Waterfront dining</li>
+            <li>Casual restaurants and cafes</li>
+        </ul>
+
+        <h3>Explore Local Food</h3>
+
+        <p>
+            After a day of exploring Morehead City,
+            visitors can enjoy a meal at one of the
+            area's local restaurants.
+        </p>
+    </main>
+
+    <footer>
+        <p>Morehead City Local Guide</p>
+    </footer>
+
+</body>
+</html>
