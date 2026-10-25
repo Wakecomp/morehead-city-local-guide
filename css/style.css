@@ -1,3 +1,167 @@
-/* Morehead City Local Guide
-   Styles will be added in Module 10.
-*/
+/* Morehead City Local Guide - Module 10 */
+
+/* General page styling */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f5fafc;
+    color: #243746;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #126782;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin: 10px 0 20px;
+}
+
+/* Navigation using Flexbox */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #09465b;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background-color: #e9d9b7;
+    color: #243746;
+}
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+h2 {
+    color: #126782;
+    margin-top: 0;
+}
+
+h3 {
+    color: #09465b;
+}
+
+/* Links */
+main a {
+    color: #075574;
+    font-weight: bold;
+}
+
+main a:hover {
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 3px solid #b06a16;
+    outline-offset: 3px;
+}
+
+/* Featured content using Flexbox */
+.featured {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.featured article {
+    flex: 1 1 250px;
+    background-color: #f5fafc;
+    padding: 20px;
+    border: 1px solid #d3e3e9;
+    border-radius: 8px;
+}
+
+.featured article h3 {
+    margin-top: 0;
+}
+
+/* Images */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Footer */
+footer {
+    background-color: #126782;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    header {
+        padding: 25px 15px;
+    }
+
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .featured {
+        flex-direction: column;
+    }
+
+    .featured article {
+        flex-basis: auto;
+    }
+}
