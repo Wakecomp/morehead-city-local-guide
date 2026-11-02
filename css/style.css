@@ -1,160 +1,345 @@
-/* Morehead City Local Guide - Module 10 */
+/* =====================================
+   MOREHEAD CITY LOCAL GUIDE
+   MODULE 11 CSS IMPROVEMENTS
+   ===================================== */
 
-/* General page styling */
+/* General page settings */
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5fafc;
+    font-size: 16px;
+    line-height: 1.7;
     color: #243746;
-    line-height: 1.6;
+    background: linear-gradient(
+        135deg,
+        #eaf8ff 0%,
+        #d9f1f5 50%,
+        #f5fcff 100%
+    );
+    min-height: 100vh;
 }
 
-/* Header */
+/* =====================================
+   HEADER AND COASTAL GRADIENT
+   ===================================== */
+
 header {
-    background-color: #126782;
+    background: linear-gradient(
+        120deg,
+        #064663 0%,
+        #087e8b 55%,
+        #35b6c5 100%
+    );
+
     color: white;
     text-align: center;
-    padding: 30px 20px;
+    padding: 35px 20px;
+    border-bottom: 4px solid #8de3ee;
 }
 
 header h1 {
-    margin: 0;
-    font-size: 2rem;
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    margin: 0 0 10px;
+    color: white;
 }
 
 header p {
-    margin: 10px 0 20px;
+    margin: 0 0 20px;
+    font-size: 1.1rem;
 }
 
-/* Navigation using Flexbox */
+/* =====================================
+   NAVIGATION WITH FLEXBOX
+   ===================================== */
+
 nav {
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
+    gap: 12px;
 }
 
 nav a {
+    display: inline-block;
+    padding: 10px 18px;
+
+    background: #064663;
     color: white;
+
     text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #09465b;
+    font-weight: bold;
+    border-radius: 6px;
+    border: 1px solid #b8f4ff;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
 
 nav a:hover,
 nav a:focus-visible {
-    background-color: #e9d9b7;
-    color: #243746;
+    background: #b8f4ff;
+    color: #064663;
+    transform: translateY(-3px);
 }
 
-/* Main content */
-main {
-    width: 90%;
-    max-width: 1100px;
-    margin: 30px auto;
+nav a[aria-current="page"] {
+    background: #d7faff;
+    color: #064663;
 }
+
+/* =====================================
+   MAIN CONTENT AREA
+   ===================================== */
+
+main {
+    width: 92%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+/* =====================================
+   CONTENT SECTIONS
+   ===================================== */
 
 section {
-    background-color: white;
-    padding: 25px;
+    background: #ffffff;
+    padding: 28px;
     margin-bottom: 25px;
-    border-radius: 8px;
+
+    border-radius: 12px;
+    border: 1px solid #c5e6ed;
+
+    box-shadow: 0 4px 14px
+        rgba(0, 65, 85, 0.08);
 }
 
-h2 {
-    color: #126782;
+section h2 {
+    color: #075a78;
+    font-size: 1.6rem;
     margin-top: 0;
+    margin-bottom: 15px;
+
+    border-bottom: 2px solid #87dce8;
+    padding-bottom: 10px;
 }
 
-h3 {
-    color: #09465b;
+section p {
+    margin: 12px 0;
 }
 
-/* Links */
-main a {
-    color: #075574;
-    font-weight: bold;
-}
+/* =====================================
+   FLEXBOX FEATURED CARDS
+   ===================================== */
 
-main a:hover {
-    text-decoration: none;
-}
-
-a:focus-visible {
-    outline: 3px solid #b06a16;
-    outline-offset: 3px;
-}
-
-/* Featured content using Flexbox */
 .featured {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    margin-top: 20px;
 }
 
 .featured article {
-    flex: 1 1 250px;
-    background-color: #f5fafc;
+    flex: 1 1 240px;
+    min-width: 0;
+
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #e9f8fc
+    );
+
+    border: 1px solid #a9dbe6;
+    border-radius: 10px;
     padding: 20px;
-    border: 1px solid #d3e3e9;
-    border-radius: 8px;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.featured article:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 18px
+        rgba(0, 75, 100, 0.15);
+
+    border-color: #28a8c0;
 }
 
 .featured article h3 {
+    color: #075a78;
     margin-top: 0;
+    font-size: 1.2rem;
 }
 
-/* Images */
+.featured article p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* =====================================
+   IMAGES
+   ===================================== */
+
 img {
     display: block;
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 
-/* Footer */
+section > img {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+    margin: 15px 0 20px;
+    border: 2px solid #b6e6ed;
+}
+
+/* =====================================
+   LINKS
+   ===================================== */
+
+main a {
+    color: #006b89;
+    font-weight: bold;
+    text-underline-offset: 3px;
+
+    transition: color 0.3s ease;
+}
+
+main a:hover {
+    color: #b04c00;
+}
+
+a:focus-visible {
+    outline: 3px solid #e09a00;
+    outline-offset: 3px;
+}
+
+/* =====================================
+   LISTS
+   ===================================== */
+
+ul {
+    padding-left: 25px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* =====================================
+   FOOTER
+   ===================================== */
+
 footer {
-    background-color: #126782;
+    background: linear-gradient(
+        120deg,
+        #064663,
+        #087e8b
+    );
+
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 22px;
+    margin-top: 35px;
 }
 
 footer p {
     margin: 0;
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 600px) {
+/* =====================================
+   TABLET RESPONSIVE DESIGN
+   ===================================== */
+
+@media (max-width: 768px) {
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
     header {
-        padding: 25px 15px;
+        padding: 28px 15px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    .featured {
+        gap: 15px;
+    }
+
+    .featured article {
+        flex: 1 1 220px;
+    }
+
+    section h2 {
+        font-size: 1.4rem;
+    }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE DESIGN
+   ===================================== */
+
+@media (max-width: 480px) {
+
+    body {
+        font-size: 15px;
+    }
+
+    header {
+        padding: 22px 12px;
     }
 
     header h1 {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
+    }
+
+    header p {
+        font-size: 0.95rem;
     }
 
     nav {
         flex-direction: column;
-        align-items: stretch;
+        gap: 10px;
     }
 
     nav a {
+        width: 100%;
+        max-width: 300px;
         text-align: center;
     }
 
     main {
         width: 95%;
-        margin: 15px auto;
+        margin: 20px auto;
     }
 
     section {
         padding: 18px;
+        margin-bottom: 18px;
+    }
+
+    section h2 {
+        font-size: 1.25rem;
     }
 
     .featured {
@@ -162,6 +347,33 @@ footer p {
     }
 
     .featured article {
-        flex-basis: auto;
+        flex: 1 1 auto;
+        width: 100%;
+    }
+
+    section > img {
+        max-height: 260px;
+    }
+}
+
+/* =====================================
+   REDUCED MOTION ACCESSIBILITY
+   ===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    nav a,
+    main a,
+    .featured article {
+        transition: none;
+    }
+
+    nav a:hover,
+    .featured article:hover {
+        transform: none;
     }
 }
